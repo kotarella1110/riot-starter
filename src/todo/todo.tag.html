@@ -22,38 +22,40 @@ import './todo.scss';
 
   <!-- this script this is optional -->
   <script>
-    this.title = opts.title || '';
-    this.items = opts.items || [];
-    this.text = '';
+    const tag = this;
 
-    this.edit = (e) => {
-      this.text = e.target.value;
+    tag.title = opts.title || '';
+    tag.items = opts.items || [];
+    tag.text = '';
+
+    tag.edit = (e) => {
+      tag.text = e.target.value;
     };
 
-    this.add = (e) => {
-      if (this.text) {
-        this.items.push({ title: this.text })
-        this.text = this.refs.input.value = '';
+    tag.add = (e) => {
+      if (tag.text) {
+        tag.items.push({ title: tag.text })
+        tag.text = tag.refs.input.value = '';
       }
       e.preventDefault();
     };
 
-    this.removeAllDone = (e) => {
-      this.items = this.items.filter((item) => {
+    tag.removeAllDone = (e) => {
+      tag.items = tag.items.filter((item) => {
         return !item.done;
       });
     };
 
     // an two example how to filter items on the list
-    this.whatShow = (item) => {
+    tag.whatShow = (item) => {
       return !item.hidden;
     };
 
-    this.onlyDone = (item) => {
+    tag.onlyDone = (item) => {
       return item.done;
     };
 
-    this.toggle = (e) => {
+    tag.toggle = (e) => {
       const item = e.item;
       item.done = !item.done;
       return true;
