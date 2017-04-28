@@ -5,9 +5,9 @@ import './todo.scss';
   <h3>{ title }</h3>
 
   <ul>
-    <li each={ items.filter(whatShow) }>
-      <label class={ completed: done }>
-        <input type="checkbox" checked={ done } onclick={ parent.toggle }> { title }
+    <li each={ item in items.filter(whatShow) }>
+      <label class={ completed: item.done }>
+        <input type="checkbox" checked={ item.done } onclick={ parent.toggle }> { item.title }
       </label>
     </li>
   </ul>
@@ -56,7 +56,7 @@ import './todo.scss';
     };
 
     tag.toggle = (e) => {
-      const item = e.item;
+      const item = e.item.item;
       item.done = !item.done;
       return true;
     };
