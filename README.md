@@ -1,6 +1,8 @@
 # Riot.js Starterkit
 
-This is a simple starterkit for riot applications.
+[![RiotJS Style Guide badge](https://cdn.rawgit.com/voorhoede/riotjs-style-guide/master/riotjs-style-guide.svg)](https://github.com/voorhoede/riotjs-style-guide)
+
+This is a simple starterkit for riot applications. Companion to the [RiotJS Style Guide](https://github.com/voorhoede/riotjs-style-guide).
 
 This starterkit is based on:
 
