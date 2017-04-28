@@ -1,0 +1,16 @@
+import '../demos/demo/demo.tag';
+import './todo.tag';
+
+<todo-demos>
+
+  <h2>todo demos</h2>
+
+  <demo label="todo with title and empty list">
+    <todo title="Groceries" />
+  </demo>
+
+  <demo label="todo with title and initial items">
+    <todo title="Groceries" items="{ [{ title:'Apples' }, { title:'Oranges', done:true }, { title:'Grapes', hidden:true }] }" />
+  </demo>
+
+</todo-demos>

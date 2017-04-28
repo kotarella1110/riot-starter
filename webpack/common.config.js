@@ -88,6 +88,7 @@ export default (env) => {
       }),
       new HtmlWebpackPlugin({
         template: paths.srcHtml,
+        chunks: ['main', 'polyfills', 'vendor']
       }),
       new CleanWebpackPlugin(['*'], {
         root: paths.distDir,

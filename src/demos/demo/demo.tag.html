@@ -1,0 +1,11 @@
+import './demo.scss';
+
+<demo>
+  <p>{ label }</p>
+  <yield />
+  <script>
+    const tag = this;
+
+    tag.label = opts.label || '';
+  </script>
+</demo>

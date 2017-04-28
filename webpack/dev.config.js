@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import env from '../env.js';
 import paths from './paths.js';
 
@@ -7,6 +8,9 @@ export default () => {
     entry: {
       vendor: [
         'riot-hot-reload'
+      ],
+      demo: [
+        paths.srcDemosJs
       ]
     },
     module: {
@@ -31,7 +35,12 @@ export default () => {
           'NODE_ENV': JSON.stringify('development'),
         }
       }),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+        template: paths.srcDemosHtml,
+        filename: 'demos.html',
+        chunks: ['demo', 'polyfills', 'vendor']
+      }),
     ],
     devtool: 'inline-source-map',
     devServer: {
