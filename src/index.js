@@ -1,3 +1,4 @@
+import './main.scss';
 import './todo/todo.tag';
 
 riot.mount('todo', {
