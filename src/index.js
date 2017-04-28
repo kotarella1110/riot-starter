@@ -1,4 +1,4 @@
-import './todo.tag';
+import './todo/todo.tag';
 
 riot.mount('todo', {
   title: 'I want to behave!',
