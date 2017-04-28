@@ -5,7 +5,7 @@ export default () => {
     module: {
       rules: [
         { // riot
-          test: /\.tag$/,
+          test: /\.(tag|tag.html)$/,
           include: /src/,
           exclude: /node_modules/,
           enforce: 'pre',

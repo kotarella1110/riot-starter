@@ -23,7 +23,7 @@ export default (env) => {
     module: {
       rules: [
         { // js
-          test: /\.(js|tag)$/,
+          test: /\.(js|tag|tag.html)$/,
           include: /src/,
           exclude: /node_modules/,
           enforce: 'post',
@@ -80,7 +80,7 @@ export default (env) => {
       ]
     },
     resolve: {
-      extensions: ['.js'],
+      extensions: ['.js', '.html'],
     },
     plugins: [
       new webpack.ProvidePlugin({
