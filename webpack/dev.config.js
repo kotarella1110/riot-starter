@@ -9,7 +9,7 @@ export default () => {
       vendor: [
         'riot-hot-reload'
       ],
-      demo: [
+      demos: [
         paths.srcDemosJs
       ]
     },
@@ -39,7 +39,7 @@ export default () => {
       new HtmlWebpackPlugin({
         template: paths.srcDemosHtml,
         filename: 'demos.html',
-        chunks: ['demo', 'polyfills', 'vendor']
+        chunks: ['demos', 'polyfills', 'vendor']
       }),
     ],
     devtool: 'inline-source-map',
