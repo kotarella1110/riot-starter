@@ -42,6 +42,8 @@ $ yarn start
 
 Open the URL shown in your browser.
 
+If you want to view demos, Open with `/demos.html` path.
+
 ## Build
 
 ### Development
