@@ -2,7 +2,7 @@ import './todo.scss';
 
 <todo>
 
-  <h3>{ opts.title }</h3>
+  <h3>{ title }</h3>
 
   <ul>
     <li each={ items.filter(whatShow) }>
@@ -22,7 +22,9 @@ import './todo.scss';
 
   <!-- this script this is optional -->
   <script>
-    this.items = opts.items;
+    this.title = opts.title || '';
+    this.items = opts.items || [];
+    this.text = '';
 
     this.edit = (e) => {
       this.text = e.target.value;
